@@ -1,4 +1,4 @@
-import { Flex, Spinner, Text, Image, Icon } from '@chakra-ui/react';
+import { Flex, Icon, Image, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { MdCloseFullscreen } from 'react-icons/md';
 

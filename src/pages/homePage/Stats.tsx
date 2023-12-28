@@ -17,11 +17,12 @@ const Stats: React.FC<StatsProps> = (props) => {
             // height={'100px'}
             flexDirection={'column'}
             backdropFilter={'blur(100px)'}
-            borderRadius={10}
+            borderRadius={16}
             justify={'center'}
             align={'center'}
             border={'1px solid purple'}
             boxShadow={'2xl'}
+            mb={10}
             _hover={{
                 boxShadow: 'dark-lg'
             }}
