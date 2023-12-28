@@ -17,7 +17,6 @@ export default function Home() {
   const [statsLoading, setStatsLoading] = useState(false);
   const [indexes, setIndexes] = useState("")
   const [bgLink, setBGLink] = useRecoilState(bgState);
-  const [openAll, setOpenAll] = useState(false);
   const photos = [
     "https://wallpapercave.com/wp/wp8382258.jpg",
     "https://wallpapercave.com/wp/wp8988329.jpg",
