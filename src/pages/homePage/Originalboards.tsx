@@ -64,7 +64,7 @@ const OriginalBoards: React.FC<OriginalBoardsProps> = (props) => {
                         flexWrap={'wrap'}
                         align={'center'}
                         flexDirection={'column'}
-                        maxHeight={'250px'}
+                        maxHeight={'400px'}
                     >
                         {props.indexes.split(",").map((item: string) => {
                             return (
