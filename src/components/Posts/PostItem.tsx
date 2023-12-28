@@ -483,6 +483,7 @@ const PostItem: React.FC<PostItemProps> = ({ post, userIsCreator, userVoteValue,
                             <Text
                                 color={'white'}
                                 mb={1}
+                                maxW={"80%"}
                             >
                                 {URL}
                             </Text>
