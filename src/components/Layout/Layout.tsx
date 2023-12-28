@@ -15,8 +15,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 minHeight={'100vh'}
                 flexDirection={'column'}
                 bgImage={bgLink}
-                backgroundAttachment={'fixed'}
-                backgroundSize={{ base: '100% 100%', md: 'cover' }}
+                // backgroundAttachment={'fixed'}
+                backgroundSize={'cover'}
                 backgroundRepeat={'no-repeat'}
                 overflowX={'hidden'}
                 overflowY={'hidden'}
