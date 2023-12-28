@@ -259,7 +259,7 @@ const PostItem: React.FC<PostItemProps> = ({ post, userIsCreator, userVoteValue,
                                 align={'center'}
                                 justify={'center'}
                                 padding={'6px'}
-                                maxHeight={'400px'}
+                                // maxHeight={'400px'}
                                 boxShadow={'2xl'}
                                 _hover={{
                                     boxShadow: 'dark-lg'
