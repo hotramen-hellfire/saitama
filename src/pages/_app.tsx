@@ -24,7 +24,8 @@ const Loader = () => (
     <Image
       src='https://c.tenor.com/DcVyAybHshEAAAAC/tenor.gif'
       border={'3px solid white'}
-      // height={'250px'}
+      position={'sticky'}
+      top={'200px'}
       width={'400px'}
     />
     <Text

@@ -7,6 +7,7 @@ import { MdCloseFullscreen } from "react-icons/md";
 import { communityState } from '../../components/Atoms/communitiesAtom';
 import { useRecoilValue } from 'recoil';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useRouter } from 'next/router';
 type BoardModalProps = {
     selectedBoard: string,
     open: boolean,
@@ -20,6 +21,7 @@ const BoardModal: React.FC<BoardModalProps> = (props) => {
     const communityStateValue = useRecoilValue(communityState)
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false)
+    const router = useRouter();
     useEffect(() => {
         setSelectedCommunity("");
         const getBoards = async () => {
@@ -161,22 +163,18 @@ const BoardModal: React.FC<BoardModalProps> = (props) => {
                             >
                                 {communities.map((item) => {
                                     return (
-                                        <Link
-                                            href={"/r/" + item}
+                                        <Text
+                                            onClick={() => { props.setOpen(false); router.push('/r/' + item) }}
                                             key={item}
+                                            color={'white'}
+                                            cursor={'pointer'}
+                                            _hover={{
+                                                textDecoration: 'underline',
+                                                color: 'yellow'
+                                            }}
                                         >
-                                            <Text
-                                                key={item}
-                                                color={'white'}
-                                                cursor={'pointer'}
-                                                _hover={{
-                                                    textDecoration: 'underline',
-                                                    color: 'yellow'
-                                                }}
-                                            >
-                                                {item}
-                                            </Text>
-                                        </Link>
+                                            {item}
+                                        </Text>
                                     )
                                 })}
                             </Flex>
