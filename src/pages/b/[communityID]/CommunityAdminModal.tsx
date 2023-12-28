@@ -1,5 +1,4 @@
 import { Community, communityFunctionsState } from '@/src/components/Atoms/communitiesAtom';
-import SubmitRedirect from '@/src/components/Community/SubmitRedirect';
 import { Code, Flex, Icon, Input, Modal, ModalBody, ModalContent, ModalFooter, ModalOverlay, Spinner, Text, Textarea } from '@chakra-ui/react';
 import Router from "next/router";
 import React, { useEffect, useState } from 'react';
@@ -12,7 +11,7 @@ type CommunityAdminModalProps = {
 };
 
 const CommunityAdminModal: React.FC<CommunityAdminModalProps> = ({ commmunityData, camodalState, setCAModalState }) => {
-    if (!commmunityData) return <SubmitRedirect />;
+    if (!commmunityData) return <></>;
     const { updateBID, loading } = useRecoilValue(communityFunctionsState);
     const descLength = 800;
     const [charsRemaining, setCharsRemaining] = useState(descLength - commmunityData.description.length);
