@@ -46,6 +46,9 @@ const usePosts = () => {
                 batch.set(postVoteRef, newVote)
                 updatedPost.voteStatus = voteStatus + vote;
                 updatedPostVotes = [newVote, ...updatedPostVotes];
+                const postRef = doc(firestore, 'posts', post.id!)
+                batch.update(postRef, { voteStatus: increment(vote), activity: increment(vote) })
+                await batch.commit();
             } else {
                 const postVoteRef = doc(firestore, 'userByID/', uid + '/votesByUser/' + post.id);
                 voteChange = -existingVote.voteValue + vote;
@@ -56,10 +59,10 @@ const usePosts = () => {
                     voteValue: vote,
                 }
                 batch.update(postVoteRef, { voteValue: vote });
+                const postRef = doc(firestore, 'posts', post.id!)
+                batch.update(postRef, { voteStatus: increment(voteChange), activity: increment(voteChange) })
+                await batch.commit();
             }
-            const postRef = doc(firestore, 'posts', post.id!)
-            batch.update(postRef, { voteStatus: increment(voteChange), activity: increment(voteChange) })
-            await batch.commit();
             const postIdx = updatedPosts.findIndex((postObj) => postObj.id === post.id);
             updatedPosts[postIdx] = {
                 ...post,
