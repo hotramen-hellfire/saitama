@@ -116,7 +116,7 @@ const TopBoards: React.FC<TopBoardsProps> = () => {
                             <Text
                                 key={communityID}
                                 color={'white'}
-                                onClick={() => router.push('/r/' + communityID)}
+                                onClick={() => router.push('/b/' + communityID)}
                                 cursor={'pointer'}
                                 _hover={{
                                     textDecoration: 'underline',

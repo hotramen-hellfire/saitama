@@ -100,7 +100,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({ open, handl
                 await updateDoc(docRef, { communities: communityName as string });
             }
 
-            router.push("/r/" + communityName);
+            router.push("/b/" + communityName);
             handleClose();
             setCommunityName("");
             setCharsRemaining(nameLength);

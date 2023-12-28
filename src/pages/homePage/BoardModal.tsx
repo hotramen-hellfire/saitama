@@ -164,7 +164,7 @@ const BoardModal: React.FC<BoardModalProps> = (props) => {
                                 {communities.map((item) => {
                                     return (
                                         <Text
-                                            onClick={() => { props.setOpen(false); router.push('/r/' + item) }}
+                                            onClick={() => { props.setOpen(false); router.push('/b/' + item) }}
                                             key={item}
                                             color={'white'}
                                             cursor={'pointer'}

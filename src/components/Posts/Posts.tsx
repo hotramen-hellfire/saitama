@@ -1,6 +1,6 @@
 import { authentication, firestore } from '@/src/firebase/clientApp';
 import usePosts from '@/src/hooks/usePosts';
-import CommentsModal from '@/src/pages/r/[communityID]/comments/CommentsModal';
+import CommentsModal from '@/src/pages/b/[communityID]/comments/CommentsModal';
 import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';

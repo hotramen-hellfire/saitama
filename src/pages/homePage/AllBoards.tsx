@@ -63,7 +63,7 @@ const AllBoards: React.FC<AllBoardsProps> = (props) => {
                     return (<Text
                         key={item}
                         color={'white'}
-                        onClick={() => { router.push("/r/" + item) }}
+                        onClick={() => { router.push("/b/" + item) }}
                         cursor={'pointer'}
                         _hover={{
                             textDecoration: 'underline',
