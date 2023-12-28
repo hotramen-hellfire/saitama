@@ -46,7 +46,7 @@ const SignUp: React.FC<SignUpProps> = () => {
             }
 
 
-            var userDocRef: any = doc(firestore, 'userByID', signUpForm.email.split(".")[0]);
+            var userDocRef: any = doc(firestore, 'userByID', signUpForm.email);
             const userDoc = await getDoc(userDocRef);
             if (userDoc.exists()) {
                 etype = 'e';
@@ -67,7 +67,7 @@ const SignUp: React.FC<SignUpProps> = () => {
                 throw new Error('username is taken, get more creative++ :)');
             }
             await setDoc(userDocRef, {
-                uid: signUpForm.email.split(".")[0],
+                uid: signUpForm.email,
                 UName: signUpForm.UName,
                 joined: serverTimestamp(),
                 activity: 0,

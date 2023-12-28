@@ -155,7 +155,7 @@ const Header: React.FC<HeaderProps> = ({ communityData, imageLink, backLink }) =
                                     isLoading={loading}
                                     fontSize={'20px'}
                                     onClick={() => { setCAModalState(true) }}
-                                    display={user?.email?.split(".")[0] === communityData.creatorID ? 'flex' : 'none'}
+                                    display={user?.email === communityData.creatorID ? 'flex' : 'none'}
                                     _hover={{
                                         bg: 'purple',
                                         color: 'white',
@@ -234,7 +234,7 @@ const Header: React.FC<HeaderProps> = ({ communityData, imageLink, backLink }) =
                                         isLoading={loading}
                                         fontSize={'20px'}
                                         onClick={() => { setCAModalState(true) }}
-                                        display={user?.email?.split(".")[0] === communityData.creatorID ? 'flex' : 'none'}
+                                        display={user?.email === communityData.creatorID ? 'flex' : 'none'}
                                         _hover={{
                                             bg: 'purple',
                                             color: 'white',

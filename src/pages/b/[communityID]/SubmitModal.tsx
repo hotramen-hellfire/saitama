@@ -79,7 +79,7 @@ const CommunityAdminModal: React.FC<CommunityAdminModalProps> = ({ commmunityDat
         let newPost: Post = {
             id: '#',
             communityID: commmunityData.communityID,
-            creatorID: user!.email!.split('.')[0],
+            creatorID: user!.email!,
             embedURL: link,
             title: textInput.title,
             body: textInput.body,

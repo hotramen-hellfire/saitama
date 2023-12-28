@@ -25,7 +25,7 @@ const Posts: React.FC<PostsProps> = ({ communityData }) => {
         onDeletePost,
         hookLoad } = usePosts();
     var uid = "";
-    if (user) uid = user.email!.split(".")[0];
+    if (user) uid = user.email!;
 
     useEffect(() => {
         const handleHashChange = () => {
@@ -54,7 +54,7 @@ const Posts: React.FC<PostsProps> = ({ communityData }) => {
     }
 
     useEffect(() => {
-        if (user) uid = user.email!.split(".")[0];
+        if (user) uid = user.email!;
         else uid = "";
     }, [user])
 

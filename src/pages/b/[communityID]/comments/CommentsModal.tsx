@@ -63,7 +63,7 @@ const PostPage: React.FC<PostPageProps> = ({ communityData, commentsModalState, 
         }
         setCreateLoading(true);
         try {
-            const creatorID = user.email!.split('.')[0];
+            const creatorID = user.email!;
             const batch = writeBatch(firestore);
             const commentDocRef = doc(collection(firestore, 'posts/' + postStateValue.selectedPost?.id + '/comments'));
             const newComment: CommentObject = {

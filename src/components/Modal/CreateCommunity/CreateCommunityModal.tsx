@@ -25,7 +25,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({ open, handl
     const [error, setError] = useState('false');
     const [loading, setLoading] = useState(false);
     const format = /[ `!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?~]/;
-    var uid: string = user!.email!.split(".")[0];
+    var uid: string = user!.email!;
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.value.length > nameLength) return;
         setCommunityName(event.target.value);
@@ -55,7 +55,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({ open, handl
                 //create the community doc in firestore
                 transaction.set(communityDocRef, {
                     communityID: communityName,
-                    creatorID: user!.email!.split('.')[0],
+                    creatorID: user!.email!,
                     createdAt: serverTimestamp(),
                     numberOfMembers: 1,
                     privacyType: communityType,
@@ -138,7 +138,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({ open, handl
                             <Text fontSize={11} color={'gray.500'}>
                                 cannot be changed once put
                             </Text>
-                            <Text position='relative' top="28px" left="10px" width="20px" color={charsRemaining !== nameLength ? "purple" : "purple.200"}>b/</Text>
+                            <Text position='relative' top="28px" left="5px" width="20px" color={charsRemaining !== nameLength ? "purple" : "purple.200"}>b/</Text>
                             <Input position="relative" value={communityName} size={'sm'} pl={'22px'} onChange={handleChange} color={"purple"} _focusVisible={{
                                 outline: "none",
                             }} />

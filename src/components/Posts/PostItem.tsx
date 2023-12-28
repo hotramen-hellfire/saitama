@@ -77,11 +77,11 @@ const PostItem: React.FC<PostItemProps> = ({ post, userIsCreator, userVoteValue,
             const repDocRef = doc(firestore, 'reportsByPost', post.id);
             const document = await getDoc(repDocRef);
             if (document.exists()) await updateDoc(repDocRef, {
-                [user.email!.split('.')[0]]: reportText,
+                [user.email!]: reportText,
             })
             else {
                 await setDoc(repDocRef, {
-                    [user.email!.split('.')[0]]: reportText,
+                    [user.email!]: reportText,
                 })
             }
         } catch (error: any) {

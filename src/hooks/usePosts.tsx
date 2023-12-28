@@ -12,7 +12,7 @@ const usePosts = () => {
     var uid = "";
     const [user] = useAuthState(authentication)
     const [hookLoad, setHookLoad] = useState(false);
-    if (user) { uid = user.email!.split(".")[0] }
+    if (user) { uid = user.email! }
     const setAuthModalState = useSetRecoilState(authModalState);
     const [communityStateValue, setCommunityStateValue] = useRecoilState(communityState);
     const [postStateValue, setPostStateValue] = useRecoilState(PostState);
