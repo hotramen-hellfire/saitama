@@ -29,7 +29,8 @@
     "react-remove-scroll-bar": "^2.3.4",
     "react-router-hash-link": "^2.4.3",
     "recoil": "^0.7.7",
-    "safe-json-stringify": "^1.2.0"
+    "safe-json-stringify": "^1.2.0",
+    "@types/safe-json-stringify": "1.1.5"
   },
   "devDependencies": {
     "@types/node": "^20",
