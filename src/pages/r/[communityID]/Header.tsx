@@ -188,7 +188,7 @@ const Header: React.FC<HeaderProps> = ({ communityData, imageLink, backLink }) =
                                     colorScheme='purple'
                                     textAlign={'center'}
                                 >
-                                    r/{communityData.communityID}
+                                    b/{communityData.communityID}
                                 </Code>
                                 <Flex
                                     // border={'2px solid green'}

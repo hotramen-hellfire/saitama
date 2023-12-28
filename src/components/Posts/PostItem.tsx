@@ -413,6 +413,7 @@ const PostItem: React.FC<PostItemProps> = ({ post, userIsCreator, userVoteValue,
                 />
                 <ModalContent
                     minW={'50%'}
+                    maxW={'80%'}
                     bg={'transparent'}
                     justifyContent={'center'}
                     justifyItems={'center'}
@@ -421,7 +422,7 @@ const PostItem: React.FC<PostItemProps> = ({ post, userIsCreator, userVoteValue,
                     display={'flex'}
                 >
                     <ModalBody
-                        minW={'80%'}
+                        maxW={'80%'}
                         // border={'1px solid white'}
                         display={linkCopyModal ? 'flex' : 'none'}
                     >
