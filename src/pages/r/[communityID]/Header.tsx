@@ -37,9 +37,8 @@ const Header: React.FC<HeaderProps> = ({ communityData, imageLink, backLink }) =
                 width={'100%'}
             // border={'1px solid pink'}
             >
-                <Box height={'50px'} overflow={'hidden'} width={'100%'}>
-                    <Image src={backLink} alt={'just theming'} width={'100%'} />
-                </Box>
+                <Box height={'50px'} overflow={'hidden'} width={'100%'} bg={'transparent'} />
+                {/* <Image src={backLink} alt={'just theming'} width={'100%'} /> */}
                 <Flex
                     bg='white'
                     flexGrow={1}
