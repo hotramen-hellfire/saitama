@@ -31,7 +31,7 @@ const OriginalBoards: React.FC<OriginalBoardsProps> = (props) => {
                     }}
                 >
                     <Stack
-                        width={'100%'}
+                        width={'90%'}
                         align={'center'}
                         flexDirection={'column'}
                         spacing={'1px'}
