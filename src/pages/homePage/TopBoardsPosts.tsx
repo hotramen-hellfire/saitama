@@ -50,12 +50,13 @@ const TopBoards: React.FC<TopBoardsProps> = () => {
     }, [])
     return (
         <Flex
-            flexDirection={'row'}
+            flexDirection={{ base: 'column', md: 'row' }}
             width={'90%'}
             justify={'space-evenly'}
         >
             <Flex
-                width={'45%'}
+                mb={1}
+                width={{ base: '100%', md: '45%' }}
                 // height={'100px'}
                 flexDirection={'column'}
                 backdropFilter={'blur(100px)'}
@@ -132,7 +133,8 @@ const TopBoards: React.FC<TopBoardsProps> = () => {
                 </Flex>
             </Flex >
             <Flex
-                width={'45%'}
+                mt={1}
+                width={{ base: '100%', md: '45%' }}
                 // height={'100px'}
                 flexDirection={'column'}
                 backdropFilter={'blur(100px)'}
