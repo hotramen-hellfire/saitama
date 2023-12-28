@@ -12,11 +12,11 @@ const AllBoards: React.FC<AllBoardsProps> = (props) => {
             width={'90%'}
             // height={'100px'}
             flexDirection={'column'}
-            backdropFilter={'blur(100px)'}
             borderRadius={10}
             justify={'center'}
             align={'center'}
             border={'1px solid purple'}
+            backdropFilter={'blur(100px)'}
             boxShadow={'2xl'}
             _hover={{
                 boxShadow: 'dark-lg'
