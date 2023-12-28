@@ -31,7 +31,7 @@ const AboutSite: React.FC<AboutSiteProps> = () => {
                 width={'100%'}
             >
                 <Flex
-                    height={'40px'}
+                    // height={'40px'}
                     width={'80%'}
                     // border={'1px solid white'}
                     justify={'center'}
