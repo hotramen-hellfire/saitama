@@ -1,8 +1,8 @@
-import SubmitRedirect from '@/src/components/Community/SubmitRedirect';
 import { UNameState } from '@/src/components/Atoms/UNameAtom';
 import { Community, communityState } from '@/src/components/Atoms/communitiesAtom';
 import { loadingState } from '@/src/components/Atoms/loadingAtom';
 import { Post, PostState } from '@/src/components/Atoms/postsAtom';
+import EmbedYt from '@/src/components/Community/EmbedYt';
 import { authentication, firestore, storage } from '@/src/firebase/clientApp';
 import { Button, Code, Flex, Icon, Image, Input, Modal, ModalBody, ModalContent, ModalFooter, ModalOverlay, Skeleton, Spinner, Text, Textarea } from '@chakra-ui/react';
 import { Timestamp, addDoc, collection, deleteDoc, doc, increment, serverTimestamp, updateDoc } from 'firebase/firestore';
@@ -11,7 +11,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import EmbedYt from '@/src/components/Community/EmbedYt';
 type CommunityAdminModalProps = {
     commmunityData: Community;
     submitModalState: boolean
@@ -21,7 +20,7 @@ type CommunityAdminModalProps = {
 
 
 const CommunityAdminModal: React.FC<CommunityAdminModalProps> = ({ commmunityData, submitModalState, setSubmitModalState }) => {
-    if (!commmunityData) <SubmitRedirect />;
+    if (!commmunityData) <></>;
     const [postStateValue, setPostStateValue] = useRecoilState(PostState);
     const [ytEmbed, setYtEmbed] = useState("");
     const [communityStateValue, setCommunityStateValue] = useRecoilState(communityState);

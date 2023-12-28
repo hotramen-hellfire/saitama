@@ -1,13 +1,12 @@
 import { authentication, firestore } from '@/src/firebase/clientApp';
-import { Alert, AlertIcon, Button, Flex, Icon, Link, Modal, ModalBody, ModalContent, ModalFooter, ModalOverlay, Select, Spinner, Text } from '@chakra-ui/react';
-import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
-import React, { useEffect, useState } from 'react';
-import { MdArrowDropDown } from 'react-icons/md';
-import { MdCloseFullscreen } from "react-icons/md";
-import { communityState } from '../../components/Atoms/communitiesAtom';
-import { useRecoilValue } from 'recoil';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { Alert, AlertIcon, Button, Flex, Icon, Modal, ModalBody, ModalContent, ModalOverlay, Select, Spinner, Text } from '@chakra-ui/react';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { MdArrowDropDown, MdCloseFullscreen } from 'react-icons/md';
+import { useRecoilValue } from 'recoil';
+import { communityState } from '../../components/Atoms/communitiesAtom';
 type BoardModalProps = {
     selectedBoard: string,
     open: boolean,
