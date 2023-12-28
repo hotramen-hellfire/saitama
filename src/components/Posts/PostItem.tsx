@@ -412,8 +412,8 @@ const PostItem: React.FC<PostItemProps> = ({ post, userIsCreator, userVoteValue,
                     backdropFilter={'blur(5px)'}
                 />
                 <ModalContent
-                    minW={'50%'}
-                    maxW={'80%'}
+                    minW={'85%'}
+                    maxW={'100%'}
                     bg={'transparent'}
                     justifyContent={'center'}
                     justifyItems={'center'}
