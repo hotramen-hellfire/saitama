@@ -8,6 +8,7 @@ import AllBoards from "./homePage/AllBoards";
 import Originalboards from "./homePage/Originalboards";
 import Stats from "./homePage/Stats";
 import TopBoards from "./homePage/TopBoardsPosts";
+import AboutSite from "./homePage/AboutSite";
 export default function Home() {
   const [numUsers, setNumUsers] = useState(0);
   const [numPosts, setNumPosts] = useState(0);
@@ -64,11 +65,10 @@ export default function Home() {
       <Stack
         mt={10}
         width={'100%'}
-        // border={'2px solid yellow'}
         justify={'center'}
         align={'center'}
-      // flexDirection={'column'}
       >
+        <AboutSite />
         <TopBoards />
         <Originalboards indexes={indexes} setIndexes={setIndexes} />
         <AllBoards communitiesString={communities} />
