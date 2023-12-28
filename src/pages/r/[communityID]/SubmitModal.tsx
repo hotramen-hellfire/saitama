@@ -150,7 +150,7 @@ const CommunityAdminModal: React.FC<CommunityAdminModalProps> = ({ commmunityDat
     }, [loading])
     return (
         <>
-            <Modal isOpen={submitModalState} onClose={() => { }} size={'xl'}>
+            {commmunityData && <Modal isOpen={submitModalState} onClose={() => { }} size={'xl'}>
                 <ModalOverlay backdropFilter='auto' backdropBlur='2px' />
                 <ModalContent alignItems={'center'} border={'1px solid black'} minW={{ base: '10%', md: '80%' }}>
                     <Flex
@@ -473,7 +473,7 @@ const CommunityAdminModal: React.FC<CommunityAdminModalProps> = ({ commmunityDat
                         </Code>
                     </ModalFooter>
                 </ModalContent>
-            </Modal >
+            </Modal >}
         </>
     )
 }

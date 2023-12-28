@@ -58,7 +58,7 @@ const AllBoards: React.FC<AllBoardsProps> = (props) => {
                 flexDirection={'column'}
                 maxHeight={'500px'}
             >
-                {(props.communitiesString.split(',') as string[]).map(item => {
+                {props.communitiesString && (props.communitiesString.split(',') as string[]).map(item => {
                     return (<Text
                         key={item}
                         color={'white'}
