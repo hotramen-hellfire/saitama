@@ -28,6 +28,7 @@ export default function Home() {
     "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b7.jpg",
     "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b8.jpg",
     "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b9.jpg",
+    "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b10.jpg",
   ]
 
   useEffect(() => {
