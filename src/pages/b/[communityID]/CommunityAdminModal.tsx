@@ -42,7 +42,7 @@ const CommunityAdminModal: React.FC<CommunityAdminModalProps> = ({ commmunityDat
     const handleBIDCommit = async () => {
         await updateBID(commmunityData, { description: textInput.description, imageURL: url, backURL: backURL });
         setChange(true);
-        setCAModalState(false);
+        exitModal();
     }
 
     const exitModal = () => {
@@ -188,7 +188,7 @@ const CommunityAdminModal: React.FC<CommunityAdminModalProps> = ({ commmunityDat
                             <Input
                                 name={backURL}
                                 value={backURL}
-                                placeholder={'Set Icon URL'}
+                                placeholder={'Set Background URL'}
                                 _placeholder={{ color: "purple.500" }}
                                 _hover={{
                                     border: '1px solid purple',
