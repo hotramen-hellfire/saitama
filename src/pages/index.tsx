@@ -19,14 +19,15 @@ export default function Home() {
   const [indexes, setIndexes] = useState("")
   const [bgLink, setBGLink] = useRecoilState(bgState);
   const photos = [
-    "https://wallpapercave.com/wp/wp8382258.jpg",
-    "https://wallpapercave.com/wp/wp8988329.jpg",
-    "https://wallpapercave.com/wp/wp9040375.jpg",
-    "https://wallpapercave.com/wp/wp5430510.jpg",
-    "https://wallpapercave.com/wp/wp9514970.jpg",
-    "https://wallpapercave.com/dwp2x/wp12753708.jpg",
-    "https://wallpapercave.com/dwp2x/wp7568574.jpg"
-
+    "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b1.jpg",
+    "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b2.jpg",
+    "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b3.jpg",
+    "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b4.jpg",
+    "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b5.jpg",
+    "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b6.jpg",
+    "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b7.jpg",
+    "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b8.jpg",
+    "https://raw.githubusercontent.com/hotramen-hellfire/chanfour/main/imagebank/b9.jpg",
   ]
 
   useEffect(() => {
