@@ -1,13 +1,13 @@
-import { Stack, Text } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import { collection, doc, getCountFromServer, getDoc, increment, updateDoc } from 'firebase/firestore';
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { bgState } from "../components/Atoms/bgAtom";
 import { firestore } from "../firebase/clientApp";
+import AllBoards from "./homePage/AllBoards";
 import Originalboards from "./homePage/Originalboards";
 import Stats from "./homePage/Stats";
 import TopBoards from "./homePage/TopBoardsPosts";
-import AllBoards from "./homePage/AllBoards";
 export default function Home() {
   const [numUsers, setNumUsers] = useState(0);
   const [numPosts, setNumPosts] = useState(0);
