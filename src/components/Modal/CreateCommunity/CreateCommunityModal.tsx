@@ -138,7 +138,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({ open, handl
                             <Text fontSize={11} color={'gray.500'}>
                                 cannot be changed once put
                             </Text>
-                            <Text position='relative' top="28px" left="10px" width="20px" color={charsRemaining !== nameLength ? "purple" : "purple.200"}>r/</Text>
+                            <Text position='relative' top="28px" left="10px" width="20px" color={charsRemaining !== nameLength ? "purple" : "purple.200"}>b/</Text>
                             <Input position="relative" value={communityName} size={'sm'} pl={'22px'} onChange={handleChange} color={"purple"} _focusVisible={{
                                 outline: "none",
                             }} />
