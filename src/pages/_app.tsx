@@ -11,7 +11,8 @@ RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false;
 const Loader = () => (
   <Flex
     align={'center'}
-    justify={'center'}
+    pt={40}
+    // justify={'center'}
     height={'100%'}
     width={'100%'}
     backdropFilter={'blur(2px)'}
@@ -23,7 +24,8 @@ const Loader = () => (
     <Image
       src='https://c.tenor.com/DcVyAybHshEAAAAC/tenor.gif'
       border={'3px solid white'}
-      height={'250px'}
+      // height={'250px'}
+      width={'400px'}
     />
     <Text
       color={'white'}
@@ -61,6 +63,7 @@ function App({ Component, pageProps }: AppProps) {
           <link rel="icon" href="/leaf.png" />
         </Head>
         {loading && <Loader />}
+        {/* <Loader /> */}
         <Layout>
           <Component {...pageProps} />
         </Layout>
