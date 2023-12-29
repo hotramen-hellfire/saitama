@@ -17,23 +17,11 @@ const Header: React.FC<HeaderProps> = ({ communityData, imageLink, backLink }) =
     if (!communityData) return <></>;
     const [user] = useAuthState(authentication);
     const [camodalState, setCAModalState] = useState(false);
-    // const { onJoinOrLeaveCommunity, loading } = useRecoilValue(communityFunctionsState);
     const { onJoinOrLeaveCommunity, loading } = useCommunityFunctions();
     const [commmunityStateValue, setCommunityStateValue] = useRecoilState(communityState);
     const [isJoined, setIsJoined] = useState(!!commmunityStateValue.mySnippets.find(item => item.communityID === communityData.communityID))
     var imageWidth: number = 120;
     const setLoadingBar = useSetRecoilState(loadingState);
-    // const handleUpdate = () => {
-    //     if (!user) return;
-    //     if (isJoined) {
-
-    //     }
-    //     else {
-    //         updatedCommunity.numberOfMembers = updatedCommunity.numberOfMembers! - 1
-    //         console.log(updatedCommunity)
-    //     }
-    //     return;
-    // }
     useEffect(() => {
         setLoadingBar(loading)
     }, [loading])
