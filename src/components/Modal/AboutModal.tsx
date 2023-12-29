@@ -108,8 +108,7 @@ const AboutModal: React.FC<AboutModalProps> = (props) => {
                                 <Code
                                     mt={2}
                                 >
-                                    Sukhmanjot Singh<br />
-                                    Himanshu Gangwal
+                                    PEACE OUT. . .
                                 </Code>
                             </Flex>
                             <Link
