@@ -95,12 +95,10 @@ const BoardModal: React.FC<BoardModalProps> = (props) => {
                 >
                     <ModalBody
                         minW={'100%'}
-                        // border={'1px solid white'}
                         display={'flex'}
                     >
                         <Flex
                             width={'100%'}
-                            // height={'100px'}
                             flexDirection={'column'}
                             backdropFilter={'blur(100px)'}
                             borderRadius={10}
@@ -111,7 +109,6 @@ const BoardModal: React.FC<BoardModalProps> = (props) => {
                             <Flex
                                 height={'40px'}
                                 width={'100%'}
-                                // border={'1px solid white'}
                                 justify={'center'}
                                 align={'center'}
                             >
@@ -198,7 +195,7 @@ const BoardModal: React.FC<BoardModalProps> = (props) => {
                                 mb={1}
                                 display={!communityStateValue.mySnippets.length && user ? 'flex' : 'none'}
                             >
-                                You can only add the communities which you are a member of. . .
+                                You can only add the boards which you are a member of. . .
                             </Text>
                             <Flex
                                 width={'90%'}
@@ -209,7 +206,7 @@ const BoardModal: React.FC<BoardModalProps> = (props) => {
                                 <Select
                                     icon={<MdArrowDropDown />}
                                     display={communityStateValue.mySnippets.length ? 'flex' : 'none'}
-                                    placeholder='Select a community to add. . .'
+                                    placeholder='Select a board to add. . .'
                                     color={'white'}
                                     width={'65%'}
                                     backgroundColor={'transparent'}
@@ -238,7 +235,7 @@ const BoardModal: React.FC<BoardModalProps> = (props) => {
                                     onClick={handleAddition}
                                     isLoading={loading}
                                 >
-                                    Add Community
+                                    Add Board
                                 </Button>
                             </Flex>
                             {error &&

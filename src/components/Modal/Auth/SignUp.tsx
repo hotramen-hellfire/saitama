@@ -40,10 +40,10 @@ const SignUp: React.FC<SignUpProps> = () => {
             if (error) setError("");
             if (uerror !== '') return;
             setLoading(true);
-            if (!domains.some(((item) => (signUpForm.email.includes(item))))) {
-                etype = 'e';
-                throw new Error("only emails with .*@iit* allowed!! :)");
-            }
+            // if (!domains.some(((item) => (signUpForm.email.includes(item))))) {
+            //     etype = 'e';
+            //     throw new Error("only emails with .*@iit* allowed!! :)");
+            // }
 
 
             var userDocRef: any = doc(firestore, 'userByID', signUpForm.email);
@@ -112,7 +112,7 @@ const SignUp: React.FC<SignUpProps> = () => {
                 required
                 textAlign={"center"}
                 name="email"
-                placeholder='@iit... email'
+                placeholder='@... email'
                 type='email'
                 mb={1}
                 onChange={onChange}

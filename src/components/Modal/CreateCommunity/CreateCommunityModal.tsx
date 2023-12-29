@@ -120,7 +120,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({ open, handl
             <Modal isOpen={open} onClose={handleClose}>
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader display='flex' flexDirection={'column'} fontSize={15} padding={3}>Create A Community</ModalHeader>
+                    <ModalHeader display='flex' flexDirection={'column'} fontSize={15} padding={3}>Create A Board</ModalHeader>
                     <Box
                         pl={3}
                         pr={3}
