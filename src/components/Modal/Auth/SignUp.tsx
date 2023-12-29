@@ -7,6 +7,7 @@ import { authentication, firestore } from "../../../firebase/clientApp";
 import { FIREBASE_ERRORS } from '../../../firebase/errors';
 import { authModalState } from '../../Atoms/authModalAtom';
 import { loadingState } from "../../Atoms/loadingAtom";
+import { domains } from "@/envDom";
 type SignUpProps = {
 
 };
@@ -39,8 +40,7 @@ const SignUp: React.FC<SignUpProps> = () => {
             if (error) setError("");
             if (uerror !== '') return;
             setLoading(true);
-            let domain = "@iit";
-            if (!signUpForm.email.includes(domain)) {
+            if (!domains.some(((item) => (signUpForm.email.includes(item))))) {
                 etype = 'e';
                 throw new Error("only emails with .*@iit* allowed!! :)");
             }
