@@ -5,7 +5,7 @@ import { Post, PostState } from '@/src/components/Atoms/postsAtom';
 import EmbedYt from '@/src/components/Community/EmbedYt';
 import { authentication, firestore, storage } from '@/src/firebase/clientApp';
 import { Button, Code, Flex, Icon, Image, Input, Modal, ModalBody, ModalContent, ModalFooter, ModalOverlay, Skeleton, Spinner, Text, Textarea } from '@chakra-ui/react';
-import { Timestamp, addDoc, collection, deleteDoc, doc, increment, serverTimestamp, updateDoc } from 'firebase/firestore';
+import { Timestamp, addDoc, collection, deleteDoc, doc, increment, serverTimestamp, setDoc, updateDoc } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadString } from 'firebase/storage';
 import React, { useEffect, useRef, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -115,11 +115,12 @@ const CommunityAdminModal: React.FC<CommunityAdminModalProps> = ({ commmunityDat
                 posts: updatedPosts,
             }))
             const communityDocRef = doc(firestore, 'communities', commmunityData.communityID);
-            await updateDoc(communityDocRef, { numberOfPosts: increment(1), activity: increment(1) })
             let updatedCommunity = {
                 ...communityStateValue.currentCommunity!,
-                numberOfPosts: communityStateValue.currentCommunity!.numberOfPosts + 1
+                numberOfPosts: communityStateValue.currentCommunity!.numberOfPosts + 1,
+                activity: communityStateValue.currentCommunity!.activity + 1,
             };
+            await setDoc(communityDocRef, updatedCommunity)
             setCommunityStateValue(prev => ({
                 ...prev,
                 currentCommunity: updatedCommunity as Community
