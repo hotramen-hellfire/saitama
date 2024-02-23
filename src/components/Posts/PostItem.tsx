@@ -1,25 +1,23 @@
 import { authentication, firestore } from '@/src/firebase/clientApp';
 import { Alert, AlertIcon, Box, Button, Flex, Icon, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Modal, ModalBody, ModalContent, ModalOverlay, Skeleton, Spinner, Text, Textarea, useClipboard } from '@chakra-ui/react';
+import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 import moment from 'moment';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { BsThreeDots } from "react-icons/bs";
 import { CiHeart } from "react-icons/ci";
-import { FaHeart } from "react-icons/fa";
+import { FaBullhorn, FaHeart } from "react-icons/fa";
 import { FaHeartCircleBolt, FaHeartCrack } from "react-icons/fa6";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { MdCloseFullscreen } from "react-icons/md";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { TfiCommentAlt } from "react-icons/tfi";
-import { FaBullhorn } from "react-icons/fa";
 import { VscReport } from 'react-icons/vsc';
+import Iframe from 'react-iframe';
 import { useRecoilState, useSetRecoilState } from 'recoil';
+import { authModalState } from '../Atoms/authModalAtom';
 import { loadingState } from '../Atoms/loadingAtom';
 import { Post, PostState } from '../Atoms/postsAtom';
-import { authModalState } from '../Atoms/authModalAtom';
-import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
-import { error } from 'console';
-import Iframe from 'react-iframe';
 
 type PostItemProps = {
     hookLoad: boolean,
